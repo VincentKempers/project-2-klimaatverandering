@@ -1,5 +1,14 @@
+@font-face {
+font-family: 'Green Sans Web';
+src:
+    local('PlutoSansRegular'),
+    local('PlutoSansRegular'),
+    url('font/PlutoSansRegular.otf');
+}
+
 * {
 	margin: 0;
+	font-family: 'PlutoSansRegular';
 }
 
 h1 {
