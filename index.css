@@ -1,5 +1,13 @@
+* {
+	margin: 0;
+}
+
 h1 {
 	display: none;
+}
+
+h2,h3,h4,h5,h6,p {
+	color:white;
 }
 
 video { 
@@ -7,4 +15,39 @@ video {
     min-height: 100%;
   	background-size: cover;
 }
+
+section {
+	background-color: green;
+	height:100vh;
+}
+
+.module {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.module1 {
+	background-color: #4E4C4C;
+	height: 100vh;
+	width: 100%;
+}
+
+.module2 {
+	background-color: red;
+	width: 100%;
+	height: 100vh;
+}
+
+.module3 {
+	background-color: yellow;
+	width: 100%;
+	height: 100vh;
+}
+
+.textoverlay {
+	display: block;
+	margin: 0 auto;
+}
+
 
