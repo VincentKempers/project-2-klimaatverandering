@@ -6,43 +6,35 @@ var svg = d3.select("svg"),
       left: 40
     },
     width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom;
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-    y = d3.scaleLinear().rangeRound([height, 0]);
+var x = d3.scaleBand()
+        .rangeRound([0, width])
+        .paddingInner(0.05)
+        .align(0.2);
 
-var g = svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var y = d3.scaleLinear().rangeRound([height,0]);
+var z = d3.scaleLinear().range(["#98abc5", "#8a89a6", "#7b6888"]);
 
-d3.csv("data/water-data.csv", function(d) {
-  return d;
-}, function(error, data) {
+
+
+d3.csv("data/water-data.csv", function(d, i, columns) {
+   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+    d.total = t;
+}, function(error,data) {
   if (error) throw error;
 
-  x.domain(data.map(function(d) { console.log(d); return d.product; }));
-  y.domain([0, d3.max(data, function(d) { return d.liters; })]);
+  var keys = data.columns.slice(1);
+
+  data.sort(function(a,b){ return b.total - a. total; });
+  x.domain(data.map(function (d) { return d.product }));
+  y.domain([0, d3.max(data, function(d) {console.log(d.total)})]).nice();
+  z.domain(keys);
 
   g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(10))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("text-anchor", "end")
-      .text("liters");
-
-  g.selectAll(".bar")
-    .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d.product); })
-      .attr("y", function(d) { return y(d.liters); })
-      .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.liters); });
-});
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter()
+      .append("g")
+})

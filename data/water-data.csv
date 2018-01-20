@@ -1,7 +1,4 @@
-"product","liters"
-Rundvlees,15000
-Nederlands rundvlees,6500
-Varkensvlees,600
-Nederlands varkensvlees,4400      
-Kip,3400
-Nederlandse kip,1800
+"product","liters","nederlandse vlees"
+Rundvlees,15000,6500
+Varkensvlees,600,4400
+Kip,3400,1800
