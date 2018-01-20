@@ -63,9 +63,9 @@ d3.csv("data/water-data.csv", function(d, i, columns) {
       .attr("font-family", "sans-serif")
       .attr("font-size", 11)
       .attr("text-anchor", "end")
-    .selectAll("g")
-    .data(keys.slice().reverse())
-    .enter().append("g")
+      .selectAll("g")
+      .data(keys.slice().reverse())
+      .enter().append("g")
       .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
   legend.append("rect")
