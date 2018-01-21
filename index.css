@@ -283,11 +283,11 @@ img {
     flex-direction: row;
 }
 
-.Onderdeel_2 h1 {
+.Onderdeel_2 > h1 {
     font-size: 3.5em;
 }
 
-.boterham img {
+.boterham > img {
     width: auto;
     height: 19em;
     padding-left: 6em;
@@ -429,7 +429,6 @@ img {
 .Onderdeel_4 {
     height: 100vh;
     background-color: #3C54FF;
-
 }
 
 .figure_4 {
@@ -483,8 +482,83 @@ img {
 }
 
 .Onderdeel_5 > h2:nth-child(5) {
-display: inline-block;
--webkit-transform: translateY(-1em);
-        transform: translateY(-1em);
-color: red;
+    display: inline-block;
+    -webkit-transform: translateY(-1em);
+    transform: translateY(-1em);
+    color: red;
+}
+
+/*avond pagina's*/
+
+.avond {
+    background-color: #ff01b3;
+    height: 100vh;
+}
+
+.onderdeel1-avond {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.frans-fork-mes {
+    max-width: 50%;
+}
+
+.frans-fork-mes > p {
+    margin-left: 5em;
+}
+
+.frans-fork-mes > a {
+    margin-left: 4em;
+}
+
+.onderdeel1-avond > figure {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.onderdeel1-avond > figure > img {
+    margin: 0;
+}
+
+.onderdeel1-avond > figure > p {
+    margin-top: auto;
+    text-align: right;
+    max-width: 15em;
+    margin-bottom: 9em;
+}
+
+.onderdeel2-avond {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.onderdeel2-avond > .hollandse-pot {
+    max-width: 50%;
+}
+
+.onderdeel2-avond > .hollandse-pot > img {
+    height: auto;
+    max-width: 100%;
+    margin-left: 5em;
+    margin-top: 40%;
+}
+
+
+.onderdeel2-avond > .picture-2 {
+    max-width: 50%;
+    margin-top: 10em;
+    margin-left: 20em;
+
+}
+
+.onderdeel2-avond > .picture-2 > p {
+    max-width: 50em;
+}
+
+.onderdeel2-avond > .picture-2 > button {
+    margin-left: 0em;
 }
