@@ -2,7 +2,6 @@
     font-family: 'Green Sans Web';
     src: local('PlutoSansRegular'), local('PlutoSansRegular'), url('font/PlutoSansRegular.otf');
 }
-
 * {
     margin: 0;
     font-family: 'PlutoSansRegular';
@@ -21,6 +20,13 @@ h2 {
     font-size: 5rem;
 }
 
+h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: -1px;
+}
+
 p {
     color: white;
     font-size: 0.8em;
@@ -32,7 +38,6 @@ video {
     min-height: 100%;
     background-size: cover;
 }
-
 section {
     background-color: green;
     height: 100vh;
@@ -40,6 +45,18 @@ section {
 
 article button {
     margin-top: 2em;
+}
+.quizBtn {
+    background-color: black;
+    color: white;
+    font-size: 1.4em;
+    padding: 1.5em 0.5em;
+    margin: 2em 1em;
+    width: 400px;
+    border: none;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 20px black;
+    box-shadow: 2px 2px 20px black;
 }
 
 .intro-trump {
@@ -96,6 +113,7 @@ button:hover {
     justify-content: flex-end;
 }
 
+
 .module {
     width: 100%;
     display: -webkit-box;
@@ -106,7 +124,6 @@ button:hover {
     -ms-flex-direction: row;
     flex-direction: row;
 }
-
 .module-start {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -119,30 +136,25 @@ button:hover {
     -ms-flex-pack: top;
     justify-content: top;
 }
-
 .module1 {
     background-color: #4E4C4C;
     height: 100vh;
     width: 100%;
 }
-
 .module2 {
     background-color: red;
     width: 100%;
     height: 100vh;
 }
-
 .module3 {
     background-color: yellow;
     width: 100%;
     height: 100vh;
 }
-
 .textoverlay {
     padding-top: 40%;
     margin: 0 auto;
 }
-
 .textoverlay > img {
     display: block;
     margin: 0 auto;
@@ -150,8 +162,8 @@ button:hover {
     padding-bottom: 2em;
 }
 
-.textoverlay > h2,
-img {
+
+.textoverlay > h2, img {
     margin-bottom: 3em;
     text-align: center;
 }
@@ -316,6 +328,299 @@ img {
 /*Ontbijt 3*/
 
 .Onderdeel_3 {
+=======
+}
+.voedsel-intro > article {
+    max-width: 50%;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    margin-left: 25em;
+}
+.voedsel-intro > a > button {
+    margin-left: 4rem;
+}
+.voedsel-intro > figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.voedsel-intro > figure > img:first-child {
+    width: auto;
+    height: 20em;
+    -webkit-transform: translateY(-10em);
+    transform: translateY(-10em)
+}
+.voedsel-intro img:last-child {
+    width: auto;
+    height: 19.1em;
+    margin-bottom: 0;
+}
+
+/*Ontbijt 1 & Middag 1*/
+
+.Ontbijt {
+    background-color: #3C54FF;
+}
+.Middag {
+    background-color: #9C2AFF;
+}
+.Ontbijt .Onderdeel_1,
+.Middag .middagOnderdeel_1 {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.Ontbijt > .Onderdeel_1 p,
+.Ontbijt > .Onderdeel_1 a,
+.Middag > .middagOnderdeel_1 p,
+.Middag > .middagOnderdeel_1 a {
+    padding-left: 4rem;
+}
+.Ontbijt > .Onderdeel_1 p,
+.Middag > .middagOnderdeel_1 p {
+    max-width: 70%;
+}
+.Ontbijt .figure_1,
+.Middag .middagFigure_1 {
+    margin-top: auto;
+}
+.Ontbijt .figure_1 > p,
+.Middag .middagFigure_1 > p {
+    max-width: 40%;
+    text-align: right;
+    -webkit-transform: translateX(-9em);
+    transform: translateX(-9em);
+}
+.Ontbijt > .Onderdeel_1 img {
+    width: auto;
+    height: 460px;
+    margin: 0 6em 0 0;
+    -webkit-transform: translateY(3em);
+    transform: translateY(3em);
+}
+.Middag > .middagOnderdeel_1 img {
+    width: auto;
+    height: 460px;
+    margin: 0;
+    -webkit-transform: translateY(3em);
+    transform: translateY(3em);
+}
+
+/*Ontbijt 2*/
+
+.Onderdeel_2,
+.middagOnderdeel_2 {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.Onderdeel_2 h1,
+.middagOnderdeel_2 h1 {
+    font-size: 3.5em;
+}
+.boterham img,
+.tosti img {
+    width: auto;
+    height: 19em;
+    padding-left: 6em;
+    margin: 4em 0 0 0;
+}
+.figure_2,
+.middagFigure_2 {
+    margin-top: auto;
+    margin-bottom: 5em;
+    margin-left: 2em;
+}
+.Onderdeel_2 p,
+.middagOnderdeel_2 p {
+    max-width: 80%;
+}
+.figure_2 img,
+.middagFigure_2 img {
+    width: auto;
+    height: 18em;
+    margin-left: 3em;
+    margin-bottom: 2em;
+}
+
+/*Ontbijt 3*/
+
+.Onderdeel_3 {
+    height: 100vh;
+    background-color: #3C54FF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.nlKaas {
+    max-width: 70%;
+}
+.Onderdeel_3 p,
+.Onderdeel_3 a {
+    max-width: 60%;
+    padding-left: 4rem;
+}
+.Onderdeel_3 h1 {
+    width: 130%;
+}
+.nlKaas img {
+    margin-top: auto;
+}
+.figure_3 h2 {
+    text-align: center;
+    -webkit-animation: mymove 2s;
+    animation: myfont 2s normal forwards ease-in-out;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.figure_3-3 h2 {
+    font-size: 4.7em;
+}
+.figure_3 {
+    margin-top: 3em;
+    -webkit-animation: mymove 3s;
+    animation: mymove 2s normal forwards ease-in-out;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.figure_3 img {
+    height: 23em;
+    margin-bottom: 0em;
+    margin: 0 auto;
+    -webkit-animation: myscale 2s;
+    animation: myscale 2s normal forwards ease-in-out;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.figure_3-3 img {
+    height: 33em;
+    margin-bottom: 0em;
+}
+.figure_3-3 {
+    -webkit-animation: showEu 2s;
+    animation: showEu 2s normal forwards ease-in-out;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    opacity: 0%;
+}
+
+/*animatie*/
+
+@-webkit-keyframes mymove {
+    from {}
+    to {
+        margin-right: auto;
+        margin-left: 3em;
+    }
+}
+@-webkit-keyframes myscale {
+    from {}
+    to {
+        height: 7em;
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 1em;
+        margin-top: auto;
+    }
+}
+@-webkit-keyframes myfont {
+    from {}
+    to {
+        font-size: 2em;
+        text-align: left;
+    }
+}
+@-webkit-keyframes showEu {
+    from {}
+    to {
+        opacity: 100%;
+    }
+}
+
+/*Ontbijt 4*/
+
+.Onderdeel_4 {
+    height: 100vh;
+    background-color: #3C54FF;
+}
+.figure_4 {
+    max-width: 60%;
+    float: left;
+    margin: 0 0 0 10em;
+}
+.scheetText {
+    /*    width: 60%;*/
+    max-width: 34%;
+    float: left;
+    margin: 9em 0 0 7em;
+}
+.scheetText p:first-child {
+    margin-bottom: 2em;
+}
+
+/*Ontbijt 5*/
+
+.Onderdeel_5 {
+    height: 100vh;
+    background-color: #3C54FF;
+}
+.Onderdeel_5 h1 {
+    color: black;
+    font-size: 3.5em;
+}
+.Onderdeel_5 h2 {
+    margin-left: 4rem;
+}
+.Onderdeel_5 > h2:nth-child(2) {
+    margin-top: 0.6em;
+    color: black;
+}
+.Onderdeel_5 > h2:nth-child(3) {
+    border-bottom: 10px solid black;
+    max-width: 90%;
+    color: black;
+}
+.Onderdeel_5 h2 span {
+    color: black;
+    font-size: 1.2em;
+    margin-left: 1.5em;
+}
+.Onderdeel_5 img {
+    margin: 3em 3em 0 0;
+    height: auto;
+    width: 9%;
+    float: right;
+}
+.Onderdeel_5 button {
+    float: left;
+    margin: 2em 0 0 5em;
+}
+.Onderdeel_5 > h2:nth-child(5) {
+    float: left;
+    margin-top: 0.7em;
+    font-size: 5.2em;
+}
+
+/*Ontbijt 6*/
+
+.quizOntbijt {
     height: 100vh;
     background-color: #3C54FF;
     display: -webkit-box;
@@ -351,10 +656,6 @@ img {
     animation: myfont 2s normal forwards ease-in-out;
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
-}
-
-.figure_3-3 h2 {
-    font-size: 4.7em;
 }
 
 .figure_3 {
