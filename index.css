@@ -33,10 +33,6 @@ video {
     background-size: cover;
 }
 
-section {
-    background-color: green;
-    height: 100vh;
-}
 
 article button {
     margin-top: 2em;
@@ -494,6 +490,11 @@ button:hover {
     height: 100vh;
 }
 
+.avond > p {
+    margin-left: 5em;
+    max-width: 40%;
+}
+
 .onderdeel1-avond {
     display: flex;
     flex-direction: row;
@@ -674,4 +675,90 @@ button:hover {
 .tekstvorm3 > p{
     max-width: 40em;
     padding-right: 3em;
+}
+
+.onderdeel5-avond {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gevolgen-steak > p {
+    margin-top: auto;
+    max-width: 35em;
+    margin-left: 6em;
+}
+
+.gevolgen-steak > a {
+    margin-bottom: 4em;
+    margin-left: 5em;
+}
+
+.gevolgen-steak {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.onderdeel5-avond >.gevolgen-steak > figure {
+    margin-left: 10em;
+}
+
+.onderdeel5-avond > .gevolgen-steak > figure > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.onderdeel5-avond > .gevolgen-steak > figure > div > img:nth-child(1) {
+    margin-right: 6em;
+}
+
+.onderdeel5-avond > .gevolgen-steak > figure > p{
+    margin-left: 8em;
+}
+
+.bomen {
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.bomen > img { 
+    height: 70%;
+    height: auto;
+}
+
+.bomen > p { 
+    margin-top: auto;
+}
+
+.onderdeel6-avond {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.onderdeel6-avond > h3 {
+    color:white;
+    text-align: left;
+}
+
+.onderdeel6-avond > section {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.onderdeel6-avond > section > div > button {
+    color: white;
+    text-align: left;
+    padding: 2em 3em 2em 3em;
+    border: 5px solid black;
+
 }
