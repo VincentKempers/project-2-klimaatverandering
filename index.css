@@ -594,7 +594,7 @@ button:hover {
     margin-left: 1em;
 }
 
-.onderdeel3-avond  > .picture-3-3 >.dieren  {
+.onderdeel3-avond  > .picture-3-3 > .dieren  {
     display: flex;
     flex-direction: row;
 }
@@ -603,12 +603,17 @@ button:hover {
     width: 50%;
     height: auto;
     flex-direction: row;
+    padding-right: 3em;
 }
 
 .onderdeel4-avond {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.karbonaatje {
+    max-width: 80%;
 }
 
 .karbonaatje > figure > ul {
@@ -626,8 +631,19 @@ button:hover {
     margin-top:8em; 
 }
 
+
+.karbonaatje > figure > ul > li > img {
+    padding-bottom: 3em;
+}
+
 .karbonaatje > figure > ul > li > img:nth-child(2) {
     width: 3rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.karbonaatje > figure > ul > li:nth-child(1) > img:nth-child(1) {
+    width: 15rem;
     display: block;
     margin: 0 auto;
 }
@@ -639,7 +655,23 @@ button:hover {
 }
 
 .karbonaatje > figure > ul > li:nth-child(3) > img:nth-child(1) {
-    width: 85%;
+    width: 18rem;
     display: block;
     margin: 0 auto;
+
+}
+
+.karbonaatje > figure > ul > li > h3 {
+    display: block;
+    margin: 0 auto;
+}
+
+.tekstvorm3 {
+    margin-top: auto;
+    margin-bottom: 10rem; 
+}
+
+.tekstvorm3 > p{
+    max-width: 40em;
+    padding-right: 3em;
 }
