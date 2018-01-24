@@ -24,7 +24,7 @@ h2 {
 p {
   color: white;
   font-size: 0.8em;
-  line-height: 1.4rem;
+  line-height: 1.7rem;
 }
 
 video {
@@ -501,6 +501,224 @@ button:hover {
   margin-right: 4em;
 }
 
+/*middag pagina's*/
+
+.middag {
+  background-color: #a300ff;
+  height: 100vh;
+}
+
+.middag > p {
+  max-width: 40em;
+  margin-left: 5em;
+  margin-top: -5em;
+}
+
+.water {
+  margin-right: 4em;
+}
+
+.water > img { 
+  height: 50%;
+  height: auto;
+  margin-right: 4em;
+}
+
+.water > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.water > div > img {
+  height: 100%;
+}
+
+.water > div > aside {
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0 0 3em;
+}
+
+.water > div > aside > h3 {
+  color:white;
+  padding-bottom: 1em;
+}
+
+.water > div > aside > p {
+  max-width: 40em;
+}
+
+.Onderdeel_5 > h2 {
+  margin-left: 4rem;
+  font-size: 3em;
+}
+
+.Onderdeel_5 > h2:nth-child(2) {
+  margin-top: 0.6em
+}
+
+.Onderdeel_5 > h2:nth-child(3) {
+  border-bottom: 10px solid black;
+  max-width: 90%;
+}
+
+.Onderdeel_5 > h2:nth-child(5) {
+  font-size: 4em;
+  margin-top: 0.6em;
+}
+
+.Onderdeel_5 > h2 > span {
+  color: black;
+  font-size: 1.2em;
+  margin-left: 6em;
+}
+
+.Onderdeel_5 img {
+  margin: 3em 0 0 4em;
+  height: auto;
+  width: 8%;
+}
+
+.Onderdeel_5 > div  {
+  display: block;
+}
+
+.Onderdeel_5 > div > h2 {
+  font-size: 3em;
+  margin-top: 0.4em;
+}
+
+.Onderdeel_5 > div > h2:nth-child(2) {
+  border-bottom: 10px solid black;
+  max-width: 90%;
+  padding-bottom: 0.2em;
+}
+
+.Onderdeel_5 > div > h2:nth-child(2) > span {
+  margin-left: 7.7em;
+  color:black;
+}
+
+.Onderdeel_5 > a  {
+  float: right;
+  margin-right: 5em;
+}
+
+.onderdeel4-middag {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7em;
+}
+
+.onderdeel4-middag > p {
+  color: white;
+  text-align: left;
+  max-width: 40em;
+  margin-right: 34%;
+}
+
+.onderdeel4-middag > section {
+  display: flex;
+  flex-direction: column;    
+}
+
+.onderdeel4-middag > section > p {
+  padding-top: 3em;
+  max-width: 33em;
+}
+
+.onderdeel4-middag > section > div {
+  width: 25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 4em;
+  margin-left: 70%;
+}
+
+.onderdeel4-middag > section > div > button {
+  color: white;
+  text-align: left;
+  padding: 2em 3em 2em 3em;
+  border: none;
+}
+
+.quizline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quizline > p {
+  margin: 4em 4em 0 0;
+  max-width: 30em;
+  text-align: right;
+}
+
+.onderdeel6-middag {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.onderdeel6-middag > h3 {
+  color:white;
+  text-align: left;
+}
+
+.onderdeel6-middag > section {
+  display: flex;
+  flex-direction: column;    
+}
+
+.onderdeel6-middag > section > p {
+  padding-top: 3em;
+  max-width: 33em;
+}
+
+.onderdeel6-middag > section > a {
+  width: 0;
+}
+
+.onderdeel6-middag > section > aside {
+  width: 35em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.onderdeel6-middag > section > aside > button:nth-child(1) {
+  color: white;
+  text-align: left;
+  padding: 2em 6em 2em 6em;
+  border: none;
+}
+
+.onderdeel6-middag > section > aside > button:nth-child(2) {
+  color: white;
+  text-align: left;
+  padding: 2em 6em 2em 6em;
+  border: none;
+}
+
+.onderdeel6-middag > section > aside:nth-child(2) > button:nth-child(1) {
+  color: white;
+  text-align: left;
+  padding: 2em 2em 2em 2em;
+  border: none;
+}
+
+.onderdeel6-middag > section > aside:nth-child(2) > button:nth-child(2) {
+  color: white;
+  text-align: left;
+  padding: 2em 2em 2em 2em;
+  border: none;
+}
+
 /*avond pagina's*/
 
 .avond {
@@ -820,6 +1038,10 @@ button:hover {
 .onderdeel6-avond > section > p {
   padding-top: 3em;
   max-width: 33em;
+}
+
+.onderdeel6-avond > section > a {
+  width: 0;
 }
 
 .onderdeel6-avond > section > div {
