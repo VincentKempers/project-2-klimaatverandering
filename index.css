@@ -21,13 +21,6 @@ h2 {
     font-size: 5rem;
 }
 
-h3 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 200;
-    letter-spacing: -1px;
-}
-
 p {
     color: white;
     font-size: 0.8em;
@@ -44,6 +37,7 @@ section {
     background-color: green;
     height: 100vh;
 }
+
 
 article button {
     margin-top: 2em;
@@ -116,7 +110,6 @@ button:hover {
     justify-content: flex-end;
 }
 
-
 .module {
     width: 100%;
     display: -webkit-box;
@@ -171,20 +164,13 @@ button:hover {
     padding-bottom: 2em;
 }
 
-
-.textoverlay > h2,
-img {
+.textoverlay > h2,img {
     margin-bottom: 3em;
     text-align: center;
 }
 
 .meat {
     margin-bottom: 6em;
-}
-
-.textoverlay {
-    display: block;
-    margin: 0 auto;
 }
 
 .explain > p {
@@ -337,9 +323,6 @@ img {
 
 /*Ontbijt 3*/
 
-.Onderdeel_3 {
-    =======
-}
 
 .voedsel-intro > article {
     max-width: 50%;
@@ -710,6 +693,10 @@ img {
     animation-delay: 2s;
 }
 
+.figure_3-3 h2 {
+    font-size: 4.7em;
+}
+
 .figure_3 {
     margin-top: 3em;
     -webkit-animation: mymove 3s;
@@ -855,6 +842,7 @@ img {
     height: 100vh;
 }
 
+
 .badkuip {
     display: flex;
     flex-direction: column;
@@ -882,8 +870,8 @@ img {
     /*flex-end werkte niet sorry vinnn*/
 }
 
-.onderdeel1-avond,
-.onderdeel1-middag {
+
+.onderdeel1-avond {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -901,8 +889,7 @@ img {
     margin-left: 4em;
 }
 
-.onderdeel1-avond > figure,
-img,
+.onderdeel1-avond > figure, img,
 .onderdeel1-middag > figure {
     margin-top: auto;
     display: flex;
@@ -957,4 +944,213 @@ img,
 
 .onderdeel2-avond > .picture-2 > button {
     margin-left: 0em;
+}
+
+.onderdeel3-avond {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.onderdeel3-avond > .vleesbijmaaltijd > p {
+    margin-left: 5em;
+}
+
+.onderdeel3-avond > .vleesbijmaaltijd > img {
+    margin-left: 5em;
+}
+
+.onderdeel3-avond > .vleesbijmaaltijd {
+    max-width: 50%;
+}   
+
+.onderdeel3-avond > .vleesbijmaaltijd > img  {
+     margin-top: auto !important;
+     padding-top: 3em;
+}
+
+.onderdeel3-avond  > .picture-3-3 {
+    margin-top: 20em;
+}
+
+.onderdeel3-avond  > .picture-3-3 > .chickens > img {
+    width: 15%;
+    margin-left: 1em;
+}
+
+.onderdeel3-avond  > .picture-3-3 > .dieren  {
+    display: flex;
+    flex-direction: row;
+}
+
+.onderdeel3-avond  > .picture-3-3 > .dieren > img {
+    width: 50%;
+    height: auto;
+    flex-direction: row;
+    padding-right: 3em;
+}
+
+.onderdeel4-avond {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.karbonaatje {
+    max-width: 80%;
+}
+
+.karbonaatje > figure > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ .karbonaatje > figure > ul > li {
+    display: flex;
+    flex-direction: column;
+}
+
+.karbonaatje > figure > ul > li {
+    margin-top:8em; 
+}
+
+
+.karbonaatje > figure > ul > li > img {
+    padding-bottom: 3em;
+}
+
+.karbonaatje > figure > ul > li > img:nth-child(2) {
+    width: 3rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.karbonaatje > figure > ul > li:nth-child(1) > img:nth-child(1) {
+    width: 15rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.karbonaatje > figure > ul > li:nth-child(2) > img:nth-child(1) {
+    width: 9rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.karbonaatje > figure > ul > li:nth-child(3) > img:nth-child(1) {
+    width: 18rem;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.karbonaatje > figure > ul > li > h3 {
+    display: block;
+    margin: 0 auto;
+}
+
+.tekstvorm3 {
+    margin-top: auto;
+    margin-bottom: 10rem; 
+}
+
+.tekstvorm3 > p{
+    max-width: 40em;
+    padding-right: 3em;
+}
+
+.onderdeel5-avond {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gevolgen-steak > p {
+    margin-top: auto;
+    max-width: 35em;
+    margin-left: 6em;
+}
+
+.gevolgen-steak > a {
+    margin-bottom: 4em;
+    margin-left: 5em;
+}
+
+.gevolgen-steak {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.onderdeel5-avond >.gevolgen-steak > figure {
+    margin-left: 10em;
+}
+
+.onderdeel5-avond > .gevolgen-steak > figure > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.onderdeel5-avond > .gevolgen-steak > figure > div > img:nth-child(1) {
+    margin-right: 6em;
+}
+
+.onderdeel5-avond > .gevolgen-steak > figure > p{
+    margin-left: 8em;
+}
+
+.bomen {
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.bomen > img { 
+    height: 70%;
+    height: auto;
+}
+
+.bomen > p { 
+    margin-top: auto;
+}
+
+.onderdeel6-avond {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.onderdeel6-avond > h3 {
+    color:white;
+    text-align: left;
+}
+
+.onderdeel6-avond > section {
+        display: flex;
+    flex-direction: column;    
+}
+
+.onderdeel6-avond > section > p {
+    padding-top: 3em;
+    max-width: 33em;
+}
+
+.onderdeel6-avond > section > div {
+    width: 26em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.onderdeel6-avond > section > div > button {
+    color: white;
+    text-align: left;
+    padding: 2em 3em 2em 3em;
+    border: none;
 }
