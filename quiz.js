@@ -1,12 +1,11 @@
-let buttonA =  document.getElementById('a3');
-let buttonB =  document.getElementById('b3');
+let buttonA =  document.getElementById('a1');
+let buttonB =  document.getElementById('b1');
 let tekstExplain = document.getElementById('uitleg');
 
 function changeBorderA() {
     buttonA.style.outline = "5px solid red";
     tekstExplain.innerHTML = `
-    Bijna! Hoewel het produceren van kaas zeker een bijdrage heeft aan Co2 uitstoot komt er bij varkensvlees nog meer kijken. 
-Niet alleen is Co2 een gevolg maar ook de enorme hoeveelheid water die wij verbruiken.
+    Helaas! Doordat koeien vier magen hebben en continu lopen te grazen laten ze de hele dag scheten. Hierdoor komt enorm veel methaan gas vrij. Daarnaast wordt de koeienpoep ook gebruikt om mest te maken voor de boeren. Hierdoor komt ook lachgas vrij.  De stof methaan is 23 keer schadelijker voor het milieu dan de CO2 die in de uitlaatgassen van de auto’s zit. En lachgas wel 296 keer!
     `;
     buttonB.style.outline = "none";
 }
@@ -14,9 +13,11 @@ Niet alleen is Co2 een gevolg maar ook de enorme hoeveelheid water die wij verbr
 function changeBorderB() {
     buttonB.style.outline = "5px solid #50fdcc";
     tekstExplain.innerHTML = `
-    Helemaal Goed! Hoewel het produceren van kaas zeker een bijdrage heeft aan Co2 uitstoot komt er bij varkensvlees nog meer kijken. Niet alleen is Co2 een gevolg maar ook de enorme hoeveelheid water die wij verbruiken.`;
+    Heel goed! Doordat koeien vier magen hebben en continu lopen te grazen laten ze de hele dag scheten. Hierdoor komt enorm veel methaan gas vrij. Daarnaast wordt de koeienpoep ook gebruikt om mest te maken voor de boeren. Hierdoor komt ook lachgas vrij.  De stof methaan is 23 keer schadelijker voor het milieu dan de CO2 die in de uitlaatgassen van de auto’s zit. En lachgas wel 296 keer!`;
     buttonA.style.outline = "none";
 }
+
+
 
 buttonA.addEventListener('click', changeBorderA, true);
 buttonB.addEventListener('click', changeBorderB, true);

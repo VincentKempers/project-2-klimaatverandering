@@ -220,8 +220,9 @@ button:hover {
 
 /*Ontbijt 1*/
 
-.Ontbijt {
+.ontbijt {
     background-color: #3C54FF;
+    height: 100vh;
 }
 
 .Ontbijt .Onderdeel_1 {
@@ -536,11 +537,11 @@ button:hover {
     justify-content: space-between;
 }
 
-.onderdeel2-avond > .hollandse-pot {
+.hollandse-pot {
     max-width: 50%;
 }
 
-.onderdeel2-avond > .hollandse-pot > img {
+.hollandse-pot > img {
     height: auto;
     max-width: 100%;
     margin-left: 5em;
@@ -548,18 +549,18 @@ button:hover {
 }
 
 
-.onderdeel2-avond > .picture-2 {
+.picture-2 {
     max-width: 50%;
     margin-top: 10em;
     margin-left: 20em;
 
 }
 
-.onderdeel2-avond > .picture-2 > p {
+.picture-2 > p {
     max-width: 50em;
 }
 
-.onderdeel2-avond > .picture-2 > button {
+.picture-2 > button {
     margin-left: 0em;
 }
 
@@ -569,38 +570,38 @@ button:hover {
     justify-content: space-between;
 }
 
-.onderdeel3-avond > .vleesbijmaaltijd > p {
+.vleesbijmaaltijd > p {
     margin-left: 5em;
 }
 
-.onderdeel3-avond > .vleesbijmaaltijd > img {
+.vleesbijmaaltijd > img {
     margin-left: 5em;
 }
 
-.onderdeel3-avond > .vleesbijmaaltijd {
+.vleesbijmaaltijd {
     max-width: 50%;
 }   
 
-.onderdeel3-avond > .vleesbijmaaltijd > img  {
+.vleesbijmaaltijd > img  {
      margin-top: auto !important;
      padding-top: 3em;
 }
 
-.onderdeel3-avond  > .picture-3-3 {
+.picture-3-3 {
     margin-top: 20em;
 }
 
-.onderdeel3-avond  > .picture-3-3 > .chickens > img {
+.chickens > img {
     width: 15%;
     margin-left: 1em;
 }
 
-.onderdeel3-avond  > .picture-3-3 > .dieren  {
+.dieren  {
     display: flex;
     flex-direction: row;
 }
 
-.onderdeel3-avond  > .picture-3-3 > .dieren > img {
+.dieren > img {
     width: 50%;
     height: auto;
     flex-direction: row;
@@ -700,22 +701,22 @@ button:hover {
     height: 80vh;
 }
 
-.onderdeel5-avond >.gevolgen-steak > figure {
+.gevolgen-steak > figure {
     margin-left: 10em;
 }
 
-.onderdeel5-avond > .gevolgen-steak > figure > div {
+.gevolgen-steak > figure > div {
     display: flex;
     flex-direction: row;
     align-items: center;
 
 }
 
-.onderdeel5-avond > .gevolgen-steak > figure > div > img:nth-child(1) {
+.gevolgen-steak > figure > div > img:nth-child(1) {
     margin-right: 6em;
 }
 
-.onderdeel5-avond > .gevolgen-steak > figure > p{
+.gevolgen-steak > figure > p{
     margin-left: 8em;
 }
 
@@ -733,6 +734,48 @@ button:hover {
 
 .bomen > p { 
     margin-top: auto;
+}
+
+.ontbijt > p {
+    margin-left: 5em;
+    max-width: 40em;
+}
+
+.onderdeel6-ontbijt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.onderdeel6-ontbijt > h3 {
+    color:white;
+    text-align: left;
+}
+
+.onderdeel6-ontbijt > section {
+        display: flex;
+    flex-direction: column;    
+}
+
+.onderdeel6-ontbijt > section > p {
+    padding-top: 3em;
+    max-width: 33em;
+}
+
+.onderdeel6-ontbijt > section > div {
+    width: 30em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.onderdeel6-ontbijt > section > div > button {
+    color: white;
+    text-align: left;
+    padding: 2em 3em 2em 3em;
+    border: none;
 }
 
 .onderdeel6-avond {
