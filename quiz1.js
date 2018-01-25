@@ -41,3 +41,8 @@ buttonA.addEventListener('click', changeBorderA, true);
 buttonB.addEventListener('click', changeBorderB, true);
 buttonC.addEventListener('click', changeBorderC, true);
 buttonD.addEventListener('click', changeBorderD, true);
+
+$('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+});

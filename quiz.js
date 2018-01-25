@@ -21,3 +21,9 @@ function changeBorderB() {
 
 buttonA.addEventListener('click', changeBorderA, true);
 buttonB.addEventListener('click', changeBorderB, true);
+
+
+$('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+});
