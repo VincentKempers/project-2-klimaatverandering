@@ -28,8 +28,8 @@ p {
 }
 
 video {
-  min-width: 100%;
-  min-height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
   background-size: cover;
 }
 
@@ -40,20 +40,22 @@ article button {
 
 .intro-trump {
   background-color: #f9ab24;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .intro-trump > h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding-bottom: 1rem;
   padding-left: 4rem;
   padding-top: 0.5em;
+  color:black;
 }
 
 .intro-trump > p {
   max-width: 50%;
   padding-bottom: 2rem;
   padding-left: 4rem;
+  color: black;
 }
 
 /*Button*/
@@ -90,6 +92,15 @@ button:hover {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-top: 0 auto;
+}
+
+.trumps > img {
+  margin-top: auto;
+}
+
+.trumps > img:nth-child(1) {
+  width:40%;
 }
 
 .module {
@@ -114,28 +125,29 @@ button:hover {
   -webkit-box-pack: top;
   -ms-flex-pack: top;
   justify-content: top;
+  align-items: center;
 }
 
 .module1 {
   background-color: #4E4C4C;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
+  width: 33%;
 }
 
 .module2 {
   background-color: red;
-  width: 100%;
-  height: 100vh;
+  width: 33%;
+  min-height: 100vh;
 }
 
 .module3 {
   background-color: yellow;
-  width: 100%;
-  height: 100vh;
+  width: 34%;
+  min-height: 100vh;
 }
 
 .textoverlay {
-  padding-top: 40%;
+  padding-top: 2em;
   margin: 0 auto;
 }
 
@@ -147,11 +159,23 @@ button:hover {
 }
 
 .textoverlay > h2 {
-  margin-bottom: 3em;
+  font-size: 3em;
+  margin-bottom: 2em;
   text-align: center;
 }
 
 .meat {
+  width: 78%;
+  margin-bottom: 2em;
+}
+
+.wheel {
+  width: 50%;
+  margin-bottom: 4em;
+}
+
+.kernreactor {
+  width: 50%;
   margin-bottom: 6em;
 }
 
@@ -179,54 +203,49 @@ button:hover {
 
 /* intro voedsel screens*/
 
-.voedsel-intro {
+.voedsel {
   background-image: url(imgs/bg_mes_voedsel.svg);
   background-color: #ff2b2b;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.voedsel-intro > article {
-  max-width: 50%;
-  padding-bottom: 2rem;
-  padding-left: 4rem;
-  margin-left: 25em;
+.voedsel-intro {
+  display: flex;
+  flex-direction: row;
+}
+
+.voedsel-intro > section {
+  margin-left: 5%;
+}
+
+.voedsel-intro > section > p {
+  max-width: 45em;
+  margin-top: 4em;
 }
 
 .voedsel-intro > a > button {
   margin-left: 4rem;
 }
 
-.voedsel-intro > figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.voedsel > figure {
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-end;
+  margin-top: auto;
 }
 
-.voedsel-intro > figure > img:first-child {
-  width: auto;
-  height: 20em;
-  -webkit-transform: translateY(-10em);
-  transform: translateY(-10em)
-}
-
-.voedsel-intro img:last-child {
-  width: auto;
-  height: 19.1em;
-  margin-bottom: 0;
+.voedsel > figure > img {
+  margin-top: 1.9em;
 }
 
 /*Ontbijt 1*/
 
 .ontbijt {
   background-color: #3C54FF;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .Ontbijt .Onderdeel_1 {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +287,7 @@ button:hover {
 /*Ontbijt 2*/
 
 .Onderdeel_2 {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #3C54FF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,7 +342,7 @@ button:hover {
 /*Ontbijt 3*/
 
 .Onderdeel_3 {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #3C54FF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,7 +454,7 @@ button:hover {
 /*Ontbijt 4*/
 
 .Onderdeel_4 {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #3C54FF;
 }
 
@@ -459,7 +478,7 @@ button:hover {
 /*Ontbijt 5*/
 
 .Onderdeel_5 {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #3C54FF;
 }
 
@@ -489,11 +508,15 @@ button:hover {
   width: 8%;
 }
 
-.Onderdeel_5 > div  {
+.Onderdeel_5 > section  {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  align-items: center;
+  align-items: baseline;
+
+}
+
+.Onderdeel_5 > section > h2  {
+  font-size: 4em;
 }
 
 .Onderdeel_5 > a  {
@@ -501,11 +524,13 @@ button:hover {
   margin-right: 4em;
 }
 
+
+
 /*middag pagina's*/
 
 .middag {
   background-color: #a300ff;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .middag > p {
@@ -514,9 +539,6 @@ button:hover {
   margin-top: -5em;
 }
 
-.water {
-  margin-right: 4em;
-}
 
 .water > img { 
   height: 50%;
@@ -609,7 +631,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 7em;
 }
 
 .onderdeel4-middag > p {
@@ -662,7 +683,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 .onderdeel6-middag > h3 {
@@ -723,7 +744,7 @@ button:hover {
 
 .avond {
   background-color: #ff01b3;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .avond > p {
@@ -778,9 +799,9 @@ button:hover {
 
 .hollandse-pot > img {
   height: auto;
-  max-width: 100%;
+  max-width: 60%;
   margin-left: 5em;
-  margin-top: 40%;
+  margin-top: 20%;
 }
 
 
@@ -796,7 +817,8 @@ button:hover {
 }
 
 .picture-2 > img {
-  margin-bottom: 10em;
+  margin-bottom: 2em;
+  height: 17em;
 }
 
 .picture-2 > button {
@@ -818,7 +840,7 @@ button:hover {
 }
 
 .vleesbijmaaltijd {
-  max-width: 50%;
+  max-width: 40%;
 }   
 
 .vleesbijmaaltijd > img  {
@@ -952,11 +974,7 @@ button:hover {
 }
 
 .gevolgen-steak > figure > div > img:nth-child(1) {
-  margin-right: 6em;
-}
-
-.gevolgen-steak > figure > p{
-  margin-left: 8em;
+  margin-right: 4em;
 }
 
 .bomen {
@@ -964,16 +982,16 @@ button:hover {
   height: 70vh;
   display: flex;
   flex-direction: row;
+  align-items: baseline;
 }
 
 .bomen > img { 
   height: 70%;
-  height: auto;
 }
 
-.bomen > p { 
+/*.bomen > p { 
   margin-top: auto;
-}
+}*/
 
 .ontbijt > p {
   margin-left: 5em;
@@ -1056,4 +1074,28 @@ button:hover {
   text-align: left;
   padding: 2em 3em 2em 3em;
   border: none;
+}
+
+/*endgame baby*/
+
+.einde {
+  background-color: #ff0058;
+  height: 100vh;
+  width: 100vw;
+}
+
+.onderdeel1-einde {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+}
+
+.onderdeel1-einde > p {
+  max-width: 40em;
+  margin-top: 10%;
+}
+
+.onderdeel1-einde > a > button {
+  max-width: 40em;
 }

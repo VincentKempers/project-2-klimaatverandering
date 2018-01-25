@@ -39,6 +39,8 @@ d3.csv("data/water-data.csv", function(d, i, columns) {
     .enter().append("rect")
       .attr("x", function(d) { return x(d.data.Product); })
       .attr("y", function(d) { return y(d[1]); })
+      .attr("rx", 20)
+      .attr("ry", 20)
       .attr("height", function(d) { return y(d[0]) - y(d[1]); })
       .attr("width", x.bandwidth());
 
