@@ -1,8 +1,10 @@
-let buttonA =  document.getElementById('a2');
-let buttonB =  document.getElementById('b2');
-let buttonC =  document.getElementById('c2');
-let buttonD =  document.getElementById('d2');
+let buttonA = document.getElementById('a2');
+let buttonB = document.getElementById('b2');
+let buttonC = document.getElementById('c2');
+let buttonD = document.getElementById('d2');
 let tekstExplain = document.getElementById('uitleg');
+let emojiGoed = document.getElementById('honderdMiddag');
+let emojiFout = document.getElementById('huilenMiddag');
 
 function changeBorderA() {
     buttonA.style.outline = "5px solid red";
@@ -10,6 +12,8 @@ function changeBorderA() {
     buttonB.style.outline = "none";
     buttonC.style.outline = "none";
     buttonD.style.outline = "none";
+    emojiFout.innerHTML = '😭'
+    emojiGoed.innerHTML = '';
 }
 
 function changeBorderB() {
@@ -18,6 +22,8 @@ function changeBorderB() {
     buttonA.style.outline = "none";
     buttonC.style.outline = "none";
     buttonD.style.outline = "none";
+    emojiFout.innerHTML = '😭'
+    emojiGoed.innerHTML = '';
 }
 
 function changeBorderC() {
@@ -26,6 +32,8 @@ function changeBorderC() {
     buttonA.style.outline = "none";
     buttonB.style.outline = "none";
     buttonD.style.outline = "none";
+    emojiGoed.innerHTML = '😍';
+    emojiFout.innerHTML = '';
 }
 
 function changeBorderD() {
@@ -34,6 +42,8 @@ function changeBorderD() {
     buttonA.style.outline = "none";
     buttonB.style.outline = "none";
     buttonC.style.outline = "none";
+    emojiFout.innerHTML = '😭'
+    emojiGoed.innerHTML = '';
 }
 
 
