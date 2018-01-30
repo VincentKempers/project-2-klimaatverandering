@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Klimaatverandering</title>
+  <meta charset="UTF-8">
+  <title>Welkom</title>
 </head>
 <body>
-      <video id="myvid" autoplay muted poster="imgs/national-geographic.ngsversion.1475151192637.adapt.1900.1.jpg">
-        <source src="video/causes-and-effects-of-climate-change-national-geographic.mp4" type="video/mp4">
-      </video>
+<div id="fullpage">
+  <div class="section " id="section0">
+    <article>
+      <h1>This is a Title</h1>
+      <a id="secNext"><button>Volgende</button></a>
+      <a id="turnOff"><button>turnoff</button></a>  
+    </article>
+  </div>
+  <div class="section" id="section1">
+    <h1 id="showName"></h1>
+      <form id="form" onsubmit="return false;">
+        <p>
+          Hoi mijn naam is <input type="text" id="userNameInput"/>,</br>
+          ik ben <input type="text" id="userAgeInput"/> jaar oud en
+          ik woon in <input type="text" id="userPlaceInput"/>.</br>
+          Ik zit op het <input type="text" id="userSchoolInput"/> school,
+           in de klas <input type="text" id="userClassInput"/>.
+        </p>
+        <input id="submit" type="submit" onclick="othername();"/>
+    </form>
+    <a id="secNext"><button>Volgende</button></a>
+  </div>
+  <div class="section" id="section2">
+    <h1>This is a Title</h1>
+    <a id="secNext"><button>Volgende</button></a>
+  </div>
+  <div class="section" id="section3">
+    <a id="secNext"><button>Volgende</button></a>
+  </div>
+</div>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.extensions.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
