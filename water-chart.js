@@ -1,84 +1,287 @@
-var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom,
-    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+// date DL:  http://statline.cbs.nl/Statweb/publication/?DM=SLNL&PA=80393ned&D1=10%2c12-13%2c16-18&D2=4%2c7&D3=a&HDR=G1%2cT&STB=G2&VW=D
+// bar using: https://github.com/liufly/Dual-scale-D3-Bar-Chart
 
-var x = d3.scaleBand()
-    .rangeRound([0, width])
-    .paddingInner(0.05)
-    .align(0.1);
+var margin = {
+  top: 40,
+  right: 30,
+  bottom: 20,
+  left: 70
+};
 
-var y = d3.scaleLinear()
-    .rangeRound([height, 0]);
+var width = 800 - margin.left - margin.right,
+ height = 550 - margin.top - margin.bottom;
 
-var z = d3.scaleOrdinal()
-    .range(["#50fdcc", "#3c54ff"]);
 
-d3.csv("data/water-data.csv", function(d, i, columns) {
-  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-  d.total = t;
-  return d;
-}, function(error, data) {
-  if (error) throw error;
+var svg = d3.select('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+  .append('g')
+    .attr('class', 'graph')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-  var keys = data.columns.slice(1);
 
-  data.sort(function(a, b) { return b.total - a.total; });
-  x.domain(data.map(function(d) { return d.Product; }));
-  y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-  z.domain(keys);
+var x = d3.scaleBand().rangeRound([0, width]).padding(0.1);
+var y0 = d3.scaleLinear().domain([300,9000]).range([height, 0]);
+var y1 = d3.scaleLinear().domain([0, 30]).range([height, 0]);
 
-  g.append("g")
-    .selectAll("g")
-    .data(d3.stack().keys(keys)(data))
-    .enter().append("g")
-      .attr("fill", function(d) { return z(d.key); })
-    .selectAll("rect")
-    .data(function(d) { return d; })
-    .enter().append("rect")
-      .attr("x", function(d) { return x(d.data.Product); })
-      .attr("y", function(d) { return y(d[1]); })
-      .attr("rx", 20)
-      .attr("ry", 20)
-      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-      .attr("width", x.bandwidth());
 
-  g.append("g")
-      .attr("class", "axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+var xAxis = d3.axisBottom(x);
+var yAxisLeft = d3.axisLeft(y0);
+var yAxisRight = d3.axisRight(y1);
 
-  g.append("g")
-      .attr("class", "axis")
-      .call(d3.axisLeft(y).ticks(10))
-    .append("text")
-      .attr("x", 12)
-      .attr("y", 1)
-      .attr("dy", "0.35em")
-      .attr("fill", "#000")
-      .attr("font-weight", "bold")
-      .attr("text-anchor", "start")
-      .text("Water in liters");
+var group = svg.append('g')
+    .attr('transform', 'translate(0,0)');
 
-      var legend = g.append("g")
-      .attr("font-family", "sans-serif")
-      .attr("font-size", 11)
-      .attr("text-anchor", "end")
-      .selectAll("g")
-      .data(keys.slice().reverse())
-      .enter().append("g")
-      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+var fullData = 'data';
 
-  legend.append("rect")
-      .attr("x", width - 19)
-      .attr("width", 19)
-      .attr("height", 19)
-      .attr("fill", z);
+var dynamicData = fullData;
 
-  legend.append("text")
-      .attr("x", width - 24)
-      .attr("y", 9.5)
-      .attr("dy", "0.32em")
-      .text(function(d) { return d; });
+d3.csv('data/water-data.csv', onload);
+
+
+function onload(err, data) {
+  if (err) throw err;
+
+  x.domain(data.map(function(d) { return d.product;}  ));
+  y0.domain([0, d3.max(data, function(d) { return d.nederlands;} )]);
+
+
+  svg.append('g')
+  .attr('class', 'x axis')
+  .attr('transform', 'translate(0,'+height+')')
+  .call(xAxis);
+
+
+  svg.append('g')
+  .attr('class','y axis axisLeft')
+  .attr('transform','translate(0,0)')
+  .call(yAxisLeft.ticks(10))
+  .append('text')
+  .style('fill','#00bdff')
+  .attr('y', 10)
+  .attr('x', 25)
+  .attr("dy", "-2.35em")
+  .style('text-anchor', 'end')
+  .text('Waterverbuik in liters');
+
+
+ svg.append('g')
+    .attr('class', 'y axis axisRight')
+    .attr('transform', 'translate(' + (width) + ',0)')
+    .call(yAxisRight.ticks(15))
+  .append('text')
+    .attr('y', 6)
+    .attr('dy', '-2em')
+    .attr('dx', '2em')
+    .style('fill', '#ffb72a')
+    .style('text-anchor', 'end')
+    .text('Co2 uitstoot in kg');
+
+  bars = group;
+  bars.selectAll('.bar')
+    .data(data)
+    .enter()
+    .append('rect')
+    .attr('class', 'bar1')
+    .attr('fill', '#00bdff')
+    .attr('x', function(d) {
+      return x(d.product);
+    })
+    .attr('y', function(d) {
+      return y0(d.nederlands);
+    })
+    .attr('rx', 10)
+    .attr('ry', 10)
+    .attr('width', x.bandwidth()/2)
+    .attr('height', function(d,i,j) {
+      return height - y0(d.nederlands)
+    });
+
+
+    bars.selectAll('.bar')
+    .data(data)
+    .enter()
+    .append('rect')
+    .attr('class', 'bar2')
+    .attr('fill', '#ffb72a')
+    .attr('x', function(d) {
+      return x(d.product);
+    })
+    .attr('y', function(d) {
+      return y1(d.uitstoot);
+    })
+    .attr('rx',10)
+    .attr('ry',10)
+    .attr('width', x.bandwidth()/4)
+    .attr('height', function(d,i,j) {
+      return height - y1(d.uitstoot)
+    });
+
+
+    function update() {
+      var selectBars = bars.selectAll('.bar')
+      .data(data).enter().selectAll('.bar1').style('fill','#00bdff')
+      .attr('x', function(d) {
+      return x(d.product);
+    }).attr('y', function(d) {
+      return y0(d.seventywater);
+    }).attr('width', x.bandwidth() / 2)
+    .attr('height', function(d,i,j) {
+      return height - y0(d.seventywater)
+    });
+
+    var selectOtherBars = bars.selectAll('.bar')
+    .data(data).enter().selectAll('.bar2').style('fill','#ffb72a')
+    .attr('x', function(d) {
+    return x(d.product);
+  }).attr('y', function(d) {
+    return y1(d.seventyuitstoot);
+  }).attr('width', x.bandwidth() / 4)
+  .attr('height', function(d,i,j) {
+    return height - y1(d.seventyuitstoot)
+  });
+
+
+    selectBars.enter()
+    .on('click', function(e, i){
+      update();
+    });
+
+    selectOtherBars.enter().on('click', function(e,i) {
+      update();
+    })
+
+    selectBars.exit().remove();
+    selectOtherBars.exit().remove();
+    };
+
+   d3.select('#fivedays').on('click', function(e){
+  update();
 });
+
+    function newUpdate() {
+
+      var selectBars = bars.selectAll('.bar')
+      .data(data).enter().selectAll('.bar1').style('fill','#00bdff')
+      .attr('x', function(d) {
+      return x(d.product);
+    }).attr('y', function(d) {
+      return y0(d.thirtywater);
+    }).attr('width', x.bandwidth() / 2)
+    .attr('height', function(d,i,j) {
+      return height - y0(d.thirtywater)
+    });
+
+    var selectOtherBars = bars.selectAll('.bar')
+    .data(data).enter().selectAll('.bar2').style('fill','#ffb72a')
+    .attr('x', function(d) {
+    return x(d.product);
+    }).attr('y', function(d) {
+    return y1(d.thirtyuitstoot);
+
+  }).attr('width', x.bandwidth() / 4)
+    .attr('height', function(d,i,j) {
+    return height - y1(d.thirtyuitstoot)
+    });
+
+    selectBars.enter()
+    .on('click', function(e, i){
+      update();
+    });
+
+    selectOtherBars.enter().on('click', function(e,i) {
+      update();
+    })
+
+    selectBars.exit().remove();
+    selectOtherBars.exit().remove();
+    };
+
+   d3.select('#twodays').on('click', function(e){
+  newUpdate();
+});
+
+function newUpdate() {
+
+  var selectBars = bars.selectAll('.bar')
+  .data(data).enter().selectAll('.bar1').style('fill','#00bdff')
+  .attr('x', function(d) {
+  return x(d.product);
+}).attr('y', function(d) {
+  return y0(d.thirtywater);
+}).attr('width', x.bandwidth() / 2)
+.attr('height', function(d,i,j) {
+  return height - y0(d.thirtywater)
+});
+
+var selectOtherBars = bars.selectAll('.bar')
+.data(data).enter().selectAll('.bar2').style('fill','#ffb72a')
+.attr('x', function(d) {
+return x(d.product);
+}).attr('y', function(d) {
+return y1(d.thirtyuitstoot);
+}).attr('width', x.bandwidth() / 4)
+.attr('height', function(d,i,j) {
+return height - y1(d.thirtyuitstoot)
+});
+
+
+selectBars.enter()
+.on('click', function(e, i){
+  update();
+});
+
+selectOtherBars.enter().on('click', function(e,i) {
+  update();
+})
+
+selectBars.exit().remove();
+selectOtherBars.exit().remove();
+};
+
+d3.select('#twodays').on('click', function(e){
+  newUpdate();
+});
+
+function sevenDaysUpdate() {
+
+  var selectBars = bars.selectAll('.bar')
+  .data(data).enter().selectAll('.bar1').style('fill','#00bdff')
+  .attr('x', function(d) {
+  return x(d.product);
+}).attr('y', function(d) {
+  return y0(d.nederlands);
+}).attr('width', x.bandwidth() / 2)
+.attr('height', function(d,i,j) {
+  return height - y0(d.nederlands)
+});
+
+var selectOtherBars = bars.selectAll('.bar')
+.data(data).enter().selectAll('.bar2').style('fill','#ffb72a')
+.attr('x', function(d) {
+return x(d.product);
+}).attr('y', function(d) {
+return y1(d.uitstoot);
+}).attr('width', x.bandwidth() / 4)
+.attr('height', function(d,i,j) {
+return height - y1(d.uitstoot)
+});
+
+selectBars.enter()
+.on('click', function(e, i){
+  update();
+});
+
+selectOtherBars.enter().on('click', function(e,i) {
+  update();
+})
+
+  selectBars.exit().remove();
+  selectOtherBars.exit().remove();
+};
+
+  d3.select('#sevendays').on('click', function(e){
+    sevenDaysUpdate();
+  });
+
+};
