@@ -4,6 +4,7 @@ $(document).ready(function() {
     anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
     autoScrolling: true,
     scrollOverflow: false,
+    verticalCentered: false,
     scrollingSpeed: 1000
   });
 });

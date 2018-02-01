@@ -14,40 +14,133 @@
 }
 
 * {
-  margin:0;
+    margin:0;
     font-family: 'PlutoSansCondHeavy';
+    text-align: center;
 }
 
+.section > article {
+  text-align: left;
+}
+
+.section > article > button {
+  text-align: left;
+  margin: 0;
+}
+
+
+button {
+  padding: 1.2em 4em 1.2em 4em;
+  background-color: rgba(0, 0, 0, 1);
+  border: 5px solid rgba(0, 0, 0, 1);
+  border-radius: 35px;
+  box-shadow: 3px 8px 20px 0px rgba(53, 53, 53, 0.5);
+  color: white;
+  margin-top: 10em;
+  font-size: 21px;
+}
+
+h1 { 
+  font-size: 60px;
+  text-align: left;
+}
+
+p {
+  font-family: 'Pluto Sans Cond Light';
+  font-size: 20px;
+  text-align: left;
+}
+
+
+form > p {
+  font-family: 'Pluto Sans Cond Light';
+  font-size:40px;
+  letter-spacing: -0.03em;
+  line-height: 92px;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  font-family: 'Pluto Sans Cond Heavy';
+  border-bottom: 5px solid black;
+  font-size:30px;
+}
+
+.inputSmall {
+  max-width: 10%;
+}
+
+.inputMedium {
+  max-width: 28%;
+}
+
+.inputlarge {
+  max-width: 40%;
+}
+
+
+select {
+  background-color: transparent;
+  font-size: 0.99em;
+  border: none;
+  border-radius: 0;
+  border-bottom: 4px solid black;
+}
+
+
 #section0, #section2 {
+  width: 100vw;
+  height: 100vh;
   background-image: linear-gradient(to bottom right,rgba(255, 0, 145, 1), rgba(255, 0, 88, 1));
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  text-align: left;
 }
 
 #section1, #section3 {
+  width: 100vw;
+  height: 100vh;
   background-image: linear-gradient(to bottom left,rgba(255, 0, 88, 1), rgba(255, 0, 145, 1));
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+
+
+
+  /*ontbijt*/
+
+
+#section0-ontbijt, #section2-ontbijt {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right,rgba(255, 0, 145, 1), rgba(255, 0, 88, 1));
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  text-align: center;
 }
 
-#section0 > div {
-  height: 0 !important;
+#section1-ontbijt, #section3-ontbijt {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom left,rgba(255, 0, 88, 1), rgba(255, 0, 145, 1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
-#section1 > div {
-  height: 0 !important;
-}
-
-#section2 > div {
-  height: 0 !important;
-}
-
-#section3 > div {
-  height: 0 !important;
+ #showBreakfastResult > p {
+  font-size: 20px;
 }
