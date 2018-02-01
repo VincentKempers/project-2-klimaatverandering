@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#fullpage').fullpage({
     // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+    anchors: ['intro', 'introduceYourself', 'breakfast', 'breakfastResult', 'lunch', 'lunchResult', 'dinner','dinnerResult','conclude','credits'],
     autoScrolling: true,
     scrollOverflow: false,
     verticalCentered: false,
