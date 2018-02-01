@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="696" height="238" viewBox="0 0 696 238">
+  <defs>
+    <path id="b" d="M61,50 L673,50 L673,189 L61,189 L61,50 Z M591.868263,99.08 C597.077844,99.08 602.377246,101.16 605.071856,102.76 L608.48503,93.16 C605.700599,91.56 598.51497,89 590.251497,89 C574.622754,89 566,100.28 566,116.92 C566,133.8 574.622754,145 590.071856,145 C602.197605,145 611,137.4 611,125.48 C611,114.6 604.353293,108.04 592.047904,108.04 C585.670659,108.04 581.628743,110.84 579.293413,113.32 C579.922156,104.84 583.155689,99.08 591.868263,99.08 Z M589.794118,117 C594.735294,117 598,119.697115 598,125.091346 C598,130.076923 594.647059,134 589.617647,134 C584.058824,134 581.058824,129.504808 580,122.884615 C581.588235,120.514423 584.764706,117 589.794118,117 Z"/>
+    <filter id="a" width="111.1%" height="148.9%" x="-5.1%" y="-18.7%" filterUnits="objectBoundingBox">
+      <feOffset dx="3" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="453" height="238" fill="#FFFFFF"/>
+    <use fill="black" filter="url(#a)" xlink:href="#b"/>
+    <use fill="#000000" xlink:href="#b"/>
+    <text fill="#FFFFFF" font-family="PlutoSansCondBold, Pluto Sans" font-size="60" font-style="condensed" font-weight="bold" letter-spacing="-4">
+      <tspan x="106" y="143">Jouw lunch</tspan>
+    </text>
+  </g>
+</svg>

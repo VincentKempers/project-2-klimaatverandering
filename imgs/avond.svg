@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="696" height="238" viewBox="0 0 696 238">
+  <defs>
+    <path id="b" d="M61,50 L673,50 L673,189 L61,189 L61,50 Z M579.76,108.24 L579.76,118.32 L590.16,118.32 C595.52,118.32 598.32,120.16 598.32,124.48 C598.32,129.12 594.4,131.92 588.96,131.92 C583.92,131.92 579.28,130 576.96,128.8 L574.08,138.72 C576.48,139.6 582.96,142 589.52,142 C603.44,142 610.24,135.84 610.24,126.32 C610.24,118.8 606.88,115.04 601.2,112.8 C605.6,111.28 608.56,106.48 608.56,101.04 C608.56,91.28 602.24,86 589.52,86 C583.68,86 576.88,87.92 574,89.28 L576.56,99.36 C578.32,98.32 583.84,96 588.64,96 C593.44,96 596.8,98.24 596.8,102.64 C596.8,105.84 594.64,108.24 590.16,108.24 L579.76,108.24 Z"/>
+    <filter id="a" width="111.1%" height="148.9%" x="-5.1%" y="-18.7%" filterUnits="objectBoundingBox">
+      <feOffset dx="3" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="453" height="238" fill="#FFFFFF"/>
+    <use fill="black" filter="url(#a)" xlink:href="#b"/>
+    <use fill="#000000" xlink:href="#b"/>
+    <text fill="#FFFFFF" font-family="PlutoSansCondBold, Pluto Sans" font-size="60" font-style="condensed" font-weight="bold" letter-spacing="-4">
+      <tspan x="106" y="143">Jouw avondeten</tspan>
+    </text>
+  </g>
+</svg>

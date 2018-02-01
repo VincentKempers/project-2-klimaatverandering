@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="index.css">
+  <link rel="icon" 
+      type="image/png" 
+      href="imgs/favicon.png" />
   <meta charset="UTF-8">
-  <title>Welkom</title>
+  <title>Rateyourdiet</title>
 </head>
 <body>
 <div id="fullpage">
   <div class="section " id="section0">
     <article>
-      <h1>Wat voor impact heeft </br> heeft jouw dieet op het milieu</h1>
-      <button id="secNext">Volgende</button>
+      <h2>Rateyourdiet</h2>
+      <h1>Het dieet van een </br> gezonde atmosfeer</h1>
+      <p>Wat voor impact heeft jouw dieet op het klimaat. Ontdek hoe jouw favoriete maaltijd scoort!</p>
+      <button id="secNext">Start de test!</button>
       <!-- <a id="turnOff"><button>turnoff</button></a>   -->
     </article>
   </div>
   <div class="section" id="section1">
-      <form id="form" onsubmit="return false;">
+      <form id="form-introduce" onsubmit="return false;">
+        <h1>Even voorstellen...</h1>
         <p>
           Hoi mijn naam is <input type="text" class="inputMedium" id="userNameInput"/>,
         </p>
         <p>  
           ik ben <input type="text" class="inputSmall" id="userAgeInput"/> jaar oud en
-          ik woon in <input type="text" class="inputLarge" id="userPlaceInput"/>.
+          ik woon in <input type="text" class="inputMedium" id="userPlaceInput"/>.
         </p>
           <p>Ik zit op het <input type="text" class="inputLarge" id="userSchoolInput"/>,
            in de klas <select name="select" class="inputSmall" id="userClassInput">
@@ -33,52 +39,122 @@
     <a id="secNext"><button onclick="othername();">Volgende</button></a>
   </div>
   <div class="section" id="section1-ontbijt">
-    <h1>In de ochtend</h1>
       <form id="form" onsubmit="return false;">
+        <h1>In de ochtend...</h1>
         <p>
           Mijn ontbijt is niet compleet zonder 
           <select class="inputMedium" id="userBreakfastStart"/>
-            <option>brood</option>
+            <option>boterham</option>
             <option>yoghurt</option>
             <option>melk</option>
-            <option>nicks</option>
+            <option>niks</option>
            </select>,
          </p>
         <p> Daar zet ik bij 
           <select class="inputMedium" id="inputBreakfastWith"/>
-            <option>kaas</option>
+            <option>pindakaas</option>
             <option>ham</option>
             <option>kipfilet</option>
             <option>boter</option>
             <option>pindakaas</option>
-            <option>chocopasta</option>
-            <option>smeerkaas</option>
-            <option>muesli</option>
-            <option>cornflakes</option>
-            <option>fruit</option>
             <option>niks</option>
             </select> en</p> 
          <p> Dat gaat het best gepaard met 
           <select class="inputMedium" id="inputBreakfastAnd"/>
-            <option>glas melk</option>
-            <option>thee</option>
+            <option>glas water</option>
             <option>koffie</option>
             <option>water</option>
-            <option>fruit</option>
-            <option>muesli</option>
-            <option>smeerkaas</option>
-            <option>muesli</option>
-            <option>cornflakes</option>
-            <option>fruit</option>
             <option>niks</option>
           </select>.
         </p>
     </form>
-    <a><button onclick="breakFast();">Volgende</button></a>
+    <a id="secNext"><button onclick="breakfast()">Volgende</button></a>
   </div>
-  <div class="section " id="section0">
-    <h1>je hebt gekozen voor</h1>
+  <div class="section " id="section2-ontbijt">
     <article id="showBreakfastResult">
+      <img src="imgs/ontbijt.svg" alt="resultaat">
+      <h2>Je hebt gekozen voor :</h2>
+      <p>klik op een van de items om te kijken hoe je gescoord hebt!</p>
+      <ul>
+        <li>
+          <h2 id="showChosenOne"></h2>
+        <li>
+          <h2 id="showChosenTwo"></h2>
+        <li>
+          <h2 id="showChosenThree"></h2>
+        </li>
+      </ul>
+    </article>
+    <article>
+      <div class="explain-why">
+        <div class="title-rate">
+          <h1 id="nameOfFood"></h1>
+          <p id="rating"></p>
+        </br>
+        </div>
+        <p id="explanation"></p>
+        <div id="linkTainer"></div>
+      </div>
+      <button id="secNext">Volgende</button>
+    </article>
+  </div>
+  <div class="section" id="section1-ontbijt">
+      <form id="form" onsubmit="return false;">
+        <h1>In de Middag...</h1>
+        <p>
+           Bam! De les is voorbij en mijn tussenuur is begonnen. </br> Ik drink even snel 
+          <select class="inputMedium" id="userBreakfastStart"/>
+            <option>boterham</option>
+            <option>yoghurt</option>
+            <option>melk</option>
+            <option>niks</option>
+           </select>,
+         </p>
+        <p> en dan ga ik thuis
+          <select class="inputMedium" id="inputBreakfastWith"/>
+            <option>pindakaas</option>
+            <option>ham</option>
+            <option>kipfilet</option>
+            <option>boter</option>
+            <option>pindakaas</option>
+            <option>niks</option>
+            </select> maken!</p> 
+         <p> Onderweg eet ik eventjes 
+          <select class="inputMedium" id="inputBreakfastAnd"/>
+            <option>glas water</option>
+            <option>koffie</option>
+            <option>water</option>
+            <option>niks</option>
+          </select> voor de dorst.
+        </p>
+    </form>
+    <a id="secNext"><button onclick="breakfast()">Volgende</button></a>
+  </div>
+  <div class="section " id="section2-ontbijt">
+    <article id="showBreakfastResult">
+      <img src="#" alt="resultaat">
+      <h2>Je hebt gekozen voor :</h2>
+      <p>klik op een van de items om te kijken hoe je gescoord hebt!</p>
+      <ul>
+        <li>
+          <h2 id="showChosenOne"></h2>
+        <li>
+          <h2 id="showChosenTwo"></h2>
+        <li>
+          <h2 id="showChosenThree"></h2>
+        </li>
+      </ul>
+    </article>
+    <article>
+      <div class="explain-why">
+        <div class="title-rate">
+          <h1 id="nameOfFood"></h1>
+          <p id="rating"></p>
+        </br>
+        </div>
+        <p id="explanation"></p>
+        <div id="linkTainer"></div>
+      </div>
       <button id="secNext">Volgende</button>
     </article>
   </div>

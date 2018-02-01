@@ -13,42 +13,82 @@
     src: local('font/PlutoSansCondHeavy.otf'), local('font/PlutoSansCondHeavy.otf'), url('font/PlutoSansCondHeavy.otf');
 }
 
+@font-face {
+    font-family: 'Pluto Sans Cond Medium';
+    src: local('font/PlutoSansCondMedium.otf'), local('font/PlutoSansCondMedium.otf'), url('font/PlutoSansCondMedium.otf');
+}
+
+@font-face {
+    font-family: 'Pluto Sans Cond Bold';
+    src: local('font/PlutoSansCondBold.otf'), local('font/PlutoSansCondBold.otf'), url('font/PlutoSansCondBold.otf');
+}
+
 * {
     margin:0;
-    font-family: 'PlutoSansCondHeavy';
-    text-align: center;
 }
 
 .section > article {
   text-align: left;
 }
 
+button {
+    padding: 15px 59px 15px 59px;
+    background-color: rgba(0, 0, 0, 1);
+    border: 5px solid rgba(0, 0, 0, 1);
+    border-radius: 35px;
+    box-shadow: 3px 8px 20px 0px rgba(53, 53, 53, 0.5);
+    color: white;
+    margin-top: 3em;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    font-family: 'Pluto Sans Cond Medium';
+    position: absolute;
+    right: 120px;
+}
+
 .section > article > button {
   text-align: left;
-  margin: 0;
+  right:initial;
 }
 
 
 button {
-  padding: 1.2em 4em 1.2em 4em;
-  background-color: rgba(0, 0, 0, 1);
-  border: 5px solid rgba(0, 0, 0, 1);
-  border-radius: 35px;
-  box-shadow: 3px 8px 20px 0px rgba(53, 53, 53, 0.5);
-  color: white;
-  margin-top: 10em;
-  font-size: 21px;
+    padding: 15px 59px 15px 59px;
+    background-color: rgba(0, 0, 0, 1);
+    border: 5px solid rgba(0, 0, 0, 1);
+    border-radius: 35px;
+    box-shadow: 3px 8px 20px 0px rgba(53, 53, 53, 0.5);
+    color: white;
+    margin-top: 5em;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    font-family: 'Pluto Sans Cond Medium';
+    position: absolute;
+    right: 120px;
 }
 
-h1 { 
+h1 {
+  font-family: 'Pluto Sans Cond Medium'; 
   font-size: 60px;
   text-align: left;
+  letter-spacing: -0.07em;
+}
+
+h2 {
+  font-family: 'Pluto Sans Cond Medium'; 
+  font-size: 40px;
+  text-align: left;
+  letter-spacing: -0.07em;
 }
 
 p {
   font-family: 'Pluto Sans Cond Light';
   font-size: 20px;
-  text-align: left;
+  letter-spacing: -0.04em;
+}
+
+a {
+  font-family: 'Pluto Sans Cond Heavy';
 }
 
 
@@ -59,12 +99,16 @@ form > p {
   line-height: 92px;
 }
 
-input {
+#form-introduce {
+  margin-left: 10em;
+}
+
+input[type=text] {
   border: none;
   background-color: transparent;
-  font-family: 'Pluto Sans Cond Heavy';
+  font-family: 'Pluto Sans Cond Medium';
   border-bottom: 5px solid black;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .inputSmall {
@@ -82,17 +126,18 @@ input {
 
 select {
   background-color: transparent;
-  font-size: 0.99em;
   border: none;
   border-radius: 0;
   border-bottom: 4px solid black;
+  font-size: 40px;
+  font-family: 'Pluto Sans Cond Medium'
 }
 
 
 #section0, #section2 {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom right,rgba(255, 0, 145, 1), rgba(255, 0, 88, 1));
+  background-image: linear-gradient(to bottom right,rgba(255, 184, 43, 1), rgba(255, 22, 174, 1));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,36 +149,59 @@ select {
 #section1, #section3 {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom left,rgba(255, 0, 88, 1), rgba(255, 0, 145, 1));
+  background-image: linear-gradient(to bottom left,rgba(255, 22, 174, 1), rgba(255, 184, 43, 1));
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
 }
 
+#section0 {
+  background-image: url(imgs/introachtergrond.svg), linear-gradient(to bottom right,rgba(255, 184, 43, 1), rgba(255, 22, 174, 1));
+}
+
+
+#section0 > article > h1 {
+  line-height: 64px;
+}
+
+#section0 > article > h2 {
+  font-size: 30px;
+  font-family: 'Pluto Sans Cond Bold';
+  margin-bottom: 0.3em;
+}
+
+#section0 > article > p {
+  width: 493px;
+  font-family: 'Pluto Sans Cond Medium';
+  margin-top: 1em;
+}
+
+#section0 > article > button {
+  margin-top: 2em;
+}
 
 
 
   /*ontbijt*/
 
 
-#section0-ontbijt, #section2-ontbijt {
+#section0-ontbijt {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom right,rgba(255, 0, 145, 1), rgba(255, 0, 88, 1));
+  background-image: linear-gradient(to bottom right,rgba(255, 184, 43, 1), rgba(255, 22, 174, 1));
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 #section1-ontbijt, #section3-ontbijt {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom left,rgba(255, 0, 88, 1), rgba(255, 0, 145, 1));
+  background-image: linear-gradient(to top left,rgba(255, 22, 174, 1), rgba(255, 184, 43, 1));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,6 +209,84 @@ select {
   text-align: left;
 }
 
- #showBreakfastResult > p {
-  font-size: 20px;
+ #showBreakfastResult > img {
+      padding-top: 80px;
+    padding-left: 80px;
+    width: 86%;
 }
+
+#showBreakfastResult > h2 {
+    margin-top: 1em;
+    padding-left: 3.5em;
+    font-size: 40px;
+}
+
+#showBreakfastResult > ul {
+  list-style: none;
+  margin-left: 2em;
+}
+
+#showBreakfastResult > ul > li {
+  padding-bottom: 2em; 
+}
+
+#showBreakfastResult > ul > li > h2 {
+  font-family: 'Pluto Sans Cond Medium';
+  font-size: 40px; 
+}
+
+ #showBreakfastResult > p {
+    font-family: 'Pluto Sans Cond Medium';
+    padding-bottom: 2em;
+    padding-left: 7em;
+    font-size: 20px;
+}
+
+#section2-ontbijt {
+/*  width: 100vw;
+  height: 100vh;*/
+  background-image: url('imgs/group_2.svg'), linear-gradient(to bottom right,rgba(81, 245, 118, 1), rgba(14, 255, 213, 1));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.explain-why{
+  top: 0px;
+  left: 830px;
+  height: 660px;
+  width: 580px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 3px 8px 30px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+#explanation {
+  font-family: 'Pluto Sans Cond Medium';
+  text-align: left;
+  padding-left: 3em;
+  max-width: 23em;
+  padding-bottom: 2em;
+  line-height: 32px;
+  letter-spacing: -0.03em;
+}
+
+.title-rate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 3.5em;
+}
+
+.title-rate > h1 {
+  font-size: 40px;
+}
+
+#linkTainer {
+  text-align: center;
+}
+
+
+
