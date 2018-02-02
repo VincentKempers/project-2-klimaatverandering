@@ -8,60 +8,91 @@
 <body>
 <div id="fullpage">
   <div class="section" id="section0-ontbijt">
-    <article>
-      <h1>Wat voor impact heeft </br> heeft jouw dieet op het milieu</h1>
-      <button id="secNext">Volgende</button>
-      <!-- <a id="turnOff"><button>turnoff</button></a>   -->
-    </article>
+    <section id="printToPage">
+      <div class="end-title">
+        <img src="imgs/lunch.svg" alt="jou eind score">
+        <h2>You were the chosen one!</h2>
+      </div>
+      <h2>Je hebt gekozen voor :</h2>
+      <article id="end-game">
+      </article>
+      <aside>
+        <a href="javascript:demoFromHTML()" class="button"><button href="javascript:demoFromHTML()">Bronnenlijst</button></a>
+        <button>Download Resultaat</button>
+      </aside>
+    </section>
   </div>
-  <div class="section" id="section1-ontbijt">
-    <h1>In de ochtend</h1>
-      <form id="form" onsubmit="return false;">
-        <p>
-          Mijn ontbijt is niet compleet zonder 
-          <select class="inputMedium" id="userBreakfastStart"/>
-            <option>brood</option>
-            <option>yoghurt</option>
-            <option>melk</option>
-            <option>nicks</option>
-           </select>,
-         </p>
-        <p> Daar zet ik bij 
-          <select class="inputMedium" id="inputBreakfastWith"/>
-            <option>kaas</option>
-            <option>ham</option>
-            <option>kipfilet</option>
-            <option>boter</option>
-            <option>pindakaas</option>
-            <option>chocopasta</option>
-            <option>smeerkaas</option>
-            <option>muesli</option>
-            <option>cornflakes</option>
-            <option>fruit</option>
-            <option>niks</option>
-            </select> en</p> 
-         <p> Dat gaat het best gepaard met 
-          <select class="inputMedium" id="inputBreakfastAnd"/>
-            <option>glas melk</option>
-            <option>thee</option>
-            <option>koffie</option>
-            <option>water</option>
-            <option>fruit</option>
-            <option>muesli</option>
-            <option>smeerkaas</option>
-            <option>muesli</option>
-            <option>cornflakes</option>
-            <option>fruit</option>
-            <option>niks</option>
-          </select>.
-        </p>
-    </form>
-    <a><button onclick="breakFast();">Volgende</button></a>
-  </div>
-  <div class="section " id="section0">
-    <article id="showBreakfastResult">
-      <button id="secNext">Volgende</button>
-    </article>
+    <div class="section" id="section0-ontbijt">
+    <section>
+      <ul>
+        <li><h1>Project Information Design</h1></li>
+        <li><h2>Rateyourdiet &#169;</h2></li>
+        <li><h3>Sarah Ben Messaoud</h3></li>
+        <li><h3>Vincent Kempers</h3></li>
+        <li><h3>Nick Groen</h3></li>
+        <li>Bronnen:</li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/melk-en-melkproducten.aspx">http://www.voedingscentrum.nl/encyclopedie/melk-en-melkproducten.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/melk-en-melkproducten.aspx">http://www.voedingscentrum.nl/encyclopedie/melk-en-melkproducten.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/ontbijtgranen.aspx">http://www.voedingscentrum.nl/encyclopedie/ontbijtgranen.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/eieren.aspx">http://www.voedingscentrum.nl/encyclopedie/eieren.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/koffie.aspx">http://www.voedingscentrum.nl/encyclopedie/koffie.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/thee.aspx">http://www.voedingscentrum.nl/encyclopedie/thee.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/water.aspx">http://www.voedingscentrum.nl/encyclopedie/water.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/fruit.aspx">http://www.voedingscentrum.nl/encyclopedie/fruit.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/chocolade.aspx">http://www.voedingscentrum.nl/encyclopedie/chocolade.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/milieuenklimaat.aspx">http://www.voedingscentrum.nl/encyclopedie/milieuenklimaat.aspx</a>
+        </li>
+        <li>
+          <a href="https://www.eetgoedvoeljegoed.nl/zelf-yoghurt-maken/">https://www.eetgoedvoeljegoed.nl/zelf-yoghurt-maken/
+          </a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/frisdrank.aspx">http://www.voedingscentrum.nl/encyclopedie/frisdrank.aspx</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/peulvruchten.aspx">http://www.voedingscentrum.nl/encyclopedie/peulvruchten.aspx</a>
+        </li>
+        <li>
+          <a href="https://eten-en-drinken.infonu.nl/bereiding/34492-zelf-kwark-maken.html">https://eten-en-drinken.infonu.nl/bereiding/34492-zelf-kwark-maken.html</a>
+        </li>
+        <li>
+          <a href="https://www.animalstoday.nl/hoeveel-regenwoud-chocoladereep/">https://www.animalstoday.nl/hoeveel-regenwoud-chocoladereep/</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/soja.aspx">http://www.voedingscentrum.nl/encyclopedie/soja.aspx</a>
+        </li>
+        <li>
+          <a href="https://www.milieucentraal.nl/milieubewust-eten/tropische-producten/cacao/">https://www.milieucentraal.nl/milieubewust-eten/tropische-producten/cacao/</a>
+        </li>
+        <li>
+          <a href="https://www.groen7.nl/kilo-vlees-gelijk-aan-1-600-km-in-een-auto/">https://www.groen7.nl/kilo-vlees-gelijk-aan-1-600-km-in-een-auto/</a>
+        </li>
+        <li>
+          <a href="http://www.voedingscentrum.nl/encyclopedie/aardappelen.aspx">http://www.voedingscentrum.nl/encyclopedie/aardappelen.aspx</a>
+        </li>
+      </ul>
+      <article id="end-game">
+      </article>
+    </section>
   </div>
 </div>
   <script
@@ -69,7 +100,8 @@
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.extensions.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
   <script src="index.js"></script>
-  <script src="ontbijt.js"></script>
+  <script src="end.js"></script>
 </body>
 </html>

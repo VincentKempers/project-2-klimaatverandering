@@ -52,21 +52,6 @@ button {
 }
 
 
-button {
-    padding: 15px 59px 15px 59px;
-    background-color: rgba(0, 0, 0, 1);
-    border: 5px solid rgba(0, 0, 0, 1);
-    border-radius: 35px;
-    box-shadow: 3px 8px 20px 0px rgba(53, 53, 53, 0.5);
-    color: white;
-    margin-top: 3em;
-    font-size: 20px;
-    letter-spacing: 0.03em;
-    font-family: 'Pluto Sans Cond Medium';
-    position: absolute;
-    right: 120px;
-}
-
 h1 {
   font-family: 'Pluto Sans Cond Medium'; 
   font-size: 60px;
@@ -285,7 +270,7 @@ select {
   padding-bottom: 4em;
 }
 
-.linkTainer > a {
+a {
   color: black;
   margin-bottom: 40px;
 }
@@ -335,3 +320,89 @@ select {
 }
 
 
+/*eindpagina*/
+
+.section > section {
+  margin-bottom: 4em; 
+}
+
+.section > section > h2 {
+  font-family: 'Pluto Sans Cond Medium';
+  margin-left: 2em;
+  letter-spacing: -0.03em;
+}
+
+.end-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.end-title > img {
+  width: 50%;
+}
+
+.section > section > article {
+  display: flex;
+  flex-direction: row;
+}
+
+.section > section > article > ul {
+  list-style: none;
+  margin-left: 2.6em;
+}
+
+.section > section > article > ul > li {
+  margin-right: 6em;
+}
+
+.section > section > article > ul > li > h2 {
+  letter-spacing: -0.03em;
+}
+
+.section > section > article > ul > li > p {
+  font-family: 'Pluto Sans Cond Medium';
+  margin-bottom: 4em;
+}
+
+.section > section > aside {
+  display: flex;
+  flex-direction: row;
+}
+
+.section > section > aside > a > button:nth-child(1) {
+  right: 0;
+  left: 120px;
+  margin: 0;
+  position: left;
+  border-outline: 4px solid black;
+  background-color: transparent;
+  color:black;
+}
+
+.section > section > aside > button:nth-child(2) {
+  right: 120px;
+  margin: 0;
+}
+
+.section > section > ul {
+  list-style: none;
+}
+
+.section > section > ul > li:nth-child(1) > h1 {
+  letter-spacing: -0.04em;
+}
+
+.section > section > ul > li:nth-child(2) > h2 {
+  margin-bottom: 0.5em;
+  letter-spacing: -0.07em;
+}
+
+.section > section > ul > li:nth-child(5) {
+  margin-bottom: 3em;
+}
+
+.section > section > ul > li:nth-child(6) {
+  font-family: 'Pluto Sans Cond Medium'
+}

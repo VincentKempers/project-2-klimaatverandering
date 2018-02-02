@@ -56,6 +56,10 @@ var firstDinnerChoice = localStorage.getItem("userDinnerStart");
 var secondDinnerChoice = localStorage.getItem("userDinnerWith");
 var thirdDinnerChoice = localStorage.getItem("userDinnerAnd");
 
+// End game
+
+
+
 function breakfast() {
   localStorage.removeItem("userBreakfastStart");
   localStorage.removeItem("userBreakfastWith");
