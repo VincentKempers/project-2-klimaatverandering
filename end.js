@@ -82,7 +82,7 @@ function demoFromHTML() {
         function (dispose) {
             // dispose: object with X, Y of the last line add to the PDF 
             //          this allow the insertion of new lines after html
-            pdf.save('Test.pdf');
+            pdf.save(`resultaat-van-${localStorage.getItem("userName")}.pdf`);
         }, margins
     );
 }
