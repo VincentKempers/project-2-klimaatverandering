@@ -206,10 +206,16 @@ select {
   padding-bottom: 2em; 
 }
 
+
 .showResult > ul > li > h2 {
   font-family: 'Pluto Sans Cond Medium';
   font-size: 40px;
   margin-left: 1.9em; 
+}
+
+.showResult > ul > li > h2:hover {
+  border-bottom: 3px solid currentColor;
+  width: 8em;
 }
 
 .showResult > p {
