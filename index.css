@@ -271,6 +271,14 @@ select {
   font-size: 40px;
 }
 
+.explain-why > label {
+  margin-left: 3.1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Pluto Sans Cond Medium';
+}
+
 .linkTainer {
   text-align: center;
   padding-bottom: 4em;
@@ -300,6 +308,7 @@ a {
 #circle {
   margin-left: 10px;
   margin-top: 0.2em;
+  margin-right: 0.3em;
   width: 25px;
   height: 25px;
   background: black;
@@ -313,6 +322,7 @@ a {
   margin-top: 0.2em;
   width: 25px;
   height: 25px;
+  border:1px solid black;
   background: rgba(16, 255, 112, 1);
   border-outline: 1px solid black;
   -moz-border-radius: 25px;
@@ -325,6 +335,7 @@ a {
   margin-top: 0.2em;
   width: 25px;
   height: 25px;
+  border:1px solid black;
   background: rgba(255, 200, 55, 1);
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -336,6 +347,7 @@ a {
   margin-top: 0.2em;
   width: 25px;
   height: 25px;
+  border:1px solid black;
   background: rgba(255, 14, 79, 1);
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -364,6 +376,15 @@ a {
 
 #eindresultaat {
   background-image: url('imgs/conclusie_goed_icoontjes.png'), linear-gradient(to bottom right,rgba(81, 245, 118, 1), rgba(14, 255, 213, 1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#eindresultaat-bad {
+  background-image: url('imgs/conclusie_slecht_icoontjes.png'), linear-gradient(to bottom right,rgba(245, 81, 95, 1), rgba(255, 14, 79, 1));
   display: flex;
   flex-direction: column;
   justify-content: center;
