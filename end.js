@@ -50,7 +50,7 @@ function demoFromHTML() {
     var pdf = new jsPDF('p', 'pt', 'letter', 'li', 'ul', 'div', 'img');
     // source can be HTML-formatted string, or a reference
     // to an actual DOM element from which the text will be scraped.
-    source = $('#printToPage')[0];
+    source = $('#fullpage')[0];
 
     // we support special element handlers. Register them with jQuery-style 
     // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
