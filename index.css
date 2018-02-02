@@ -356,6 +356,15 @@ a {
 
 /*eindpagina*/
 
+#eindresultaat {
+  background-image: url('imgs/conclusie_goed_icoontjes.png'), linear-gradient(to bottom right,rgba(81, 245, 118, 1), rgba(14, 255, 213, 1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .section > section {
   margin-bottom: 4em; 
 }
@@ -374,7 +383,7 @@ a {
 }
 
 .end-title > img {
-  width: 50%;
+  width: 40%;
 }
 
 .section > section > article {
@@ -440,3 +449,4 @@ a {
 .section > section > ul > li:nth-child(6) {
   font-family: 'Pluto Sans Cond Medium'
 }
+
