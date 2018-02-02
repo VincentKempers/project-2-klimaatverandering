@@ -372,18 +372,18 @@ a {
 }
 
 .section > section > aside > a > button:nth-child(1) {
-  right: 0;
-  left: 120px;
+  right: 120px;
   margin: 0;
   position: left;
-  border-outline: 4px solid black;
-  background-color: transparent;
-  color:black;
 }
 
 .section > section > aside > button:nth-child(2) {
-  right: 120px;
+  left: 120px;
+  right: 0;
   margin: 0;
+  border-outline: 4px solid black;
+  background-color: transparent;
+  color:black;
 }
 
 .section > section > ul {
