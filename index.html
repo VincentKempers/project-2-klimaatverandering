@@ -41,24 +41,30 @@
       <form id="form" onsubmit="return false;">
         <h1>In de ochtend...</h1>
         <p>
-          Mijn ontbijt is niet compleet zonder 
+          Mijn ontbijt is niet compleet zonder een
           <select class="inputMedium" id="userBreakfastStart"/>
+            <option></option>
             <option>Boterham</option>
-            <option>Yoghurt</option>
-            <option>Melk</option>
+            <option>Bakje yoghurt</option>
             <option>Niks</option>
            </select>,
          </p>
-        <p> Daar zet ik bij 
+        <p> met
           <select class="inputMedium" id="inputBreakfastWith"/>
+            <option></option>
             <option>Pindakaas</option>
             <option>Ham</option>
             <option>Kipfilet</option>
             <option>Boter</option>
+            <option>Aardbei</option>
+            <option>Boter</option>
+            <option>Boter</option>
+            <option>Boter</option>
             <option>Niks</option>
-            </select> en</p> 
-         <p> Dat gaat het best gepaard met 
+            </select> en dat gaat</p> 
+         <p> het best gepaard met 
           <select class="inputMedium" id="inputBreakfastAnd"/>
+            <option></option>
             <option>Glas water</option>
             <option>Koffie</option>
             <option>Water</option>
@@ -100,17 +106,19 @@
       <form id="form" onsubmit="return false;">
         <h1>In de Middag...</h1>
         <p>
-           Bam! De les is voorbij en mijn tussenuur is begonnen. </br> Ik drink even snel 
+           Bam! De les is voorbij en mijn tussenuur is begonnen. </br> Ik drink even snel een
           <select class="inputMedium" id="userLunchStart"/>
+            <option></option>
             <option>Kopje koffie</option>
             <option>Kopje thee</option>
             <option>Glas water</option>
             <option>Glas melk</option>
             <option>niks</option>
-           </select>,
+           </select> en dan ga ik thuis
          </p>
-        <p> en dan ga ik thuis een 
+        <p> een 
           <select class="inputLarge" id="inputLunchWith"/>
+            <option></option>
             <option>Tosti met kaas</option>
             <option>Tosti met ham en kaas</option>
             <option>Tosti met kipfillet en kaas</option>
@@ -126,13 +134,14 @@
             </select> maken!</p> 
          <p> Onderweg eet ik eventjes een
           <select class="inputMedium" id="inputLunchAnd"/>
+            <option></option>
             <option>Appel</option>
             <option>Salade</option>
             <option>Breaker</option>
             <option>Banaan</option>
-            <option>Chips</option>
+            <option>zakje Chips</option>
             <option>niks</option>
-          </select> voor de dorst.
+          </select>.
         </p>
     </form>
     <a id="secNext"><button onclick="Lunch()">Volgende</button></a>
@@ -169,17 +178,18 @@
       <form id="form" onsubmit="return false;">
         <h1>In de avond</h1>
         <p>
-           Wanneer ik thuiskom van school gooi ik mijn tas in de kamer </br>en begin ik te dromen over het avondeten.</br> Gelukkig eten we vanavond 
+           Wanneer ik thuiskom van school gooi ik mijn tas de kamer in </br>en begin ik te dromen over het avondeten. Ik hoop dat</br> we vanavond
           <select class="inputMedium" id="userDinnerStart"/>
+            <option></option>
             <option>Hamburgers</option>
             <option>Kopje thee</option>
             <option>Glas water</option>
             <option>Glas melk</option>
             <option>Niks</option>
            </select>,
-         </p>
-        <p> met
-          <select class="inputLarge" id="inputDinnerWith" required="true" />
+          met 
+            <select class="inputLarge" id="inputDinnerWith" required="true" />
+            <option></option>
             <option>Frietjes</option>
             <option>Chips</option>
             <option>Spek</option>
@@ -193,15 +203,17 @@
             <option>Garnalen</option>
             <option>Gehakt</option>
             <option>Niks</option>
-            </select> maken! 
-          Om mijn dorst te lessen</br> drink ik
+            </select> eten! 
+        </p>
+         <p> Ik denk dat ik
           <select class="inputMedium" id="inputDinnerAnd"/>
+            <option></option>
             <option>Kopje thee</option>
             <option>Glas water</option>
             <option>Glas melk</option>
             <option>Wat frisdrank</option>
             <option>Niks</option>
-          </select> voor de dorst.
+          </select> bij het avondeten neem.
         </p>
     </form>
     <a id="secNext"><button onclick="Dinner()">Volgende</button></a>

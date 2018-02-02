@@ -302,6 +302,40 @@ a {
   border-radius: 25px;
 }
 
+#circle-green {
+  margin-left: 10px;
+  margin-top: 0.2em;
+  width: 25px;
+  height: 25px;
+  background: rgba(16, 255, 112, 1);
+  border-outline: 1px solid black;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+
+#circle-orange {
+  margin-left: 10px;
+  margin-top: 0.2em;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 200, 55, 1);
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+
+#circle-red {
+  margin-left: 10px;
+  margin-top: 0.2em;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 14, 79, 1);
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+
 
 /*Middag*/
 
